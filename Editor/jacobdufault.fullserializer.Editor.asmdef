@@ -1,10 +1,8 @@
 {
-    "name": "jacobdufault.fullserializer.editor.tests",
+    "name": "jacobdufault.fullserializer.editor",
     "rootNamespace": "",
     "references": [
-        "GUID:876fc7e4be4440449b13dab03f4bf21a",
-        "GUID:58d112412d90bc143bdc640c8b592908",
-        "GUID:0acc523941302664db1f4e527237feb3"
+        "GUID:876fc7e4be4440449b13dab03f4bf21a"
     ],
     "includePlatforms": [
         "Editor"

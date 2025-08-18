@@ -77,15 +77,19 @@ namespace FullSerializer.Tests {
 
     public class VersionedTypeTests {
         [Test]
-        [ExpectedException(typeof(fsDuplicateVersionNameException))]
         public void DuplicateVersionString() {
-            fsVersionManager.GetVersionedType(typeof(VersionedModelDuplicateVersionString));
+            Assert.Throws<fsDuplicateVersionNameException>(() =>
+            {
+                fsVersionManager.GetVersionedType(typeof(VersionedModelDuplicateVersionString));
+            });
         }
 
         [Test]
-        [ExpectedException(typeof(fsMissingVersionConstructorException))]
         public void MissingConstructor() {
-            fsVersionManager.GetVersionedType(typeof(VersionedModelMissingConstructor));
+            Assert.Throws<fsMissingVersionConstructorException>(() =>
+            {
+                fsVersionManager.GetVersionedType(typeof(VersionedModelMissingConstructor));
+            });
         }
 
         [Test]
